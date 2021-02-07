@@ -27,7 +27,8 @@ h3{
   grid-gap : 15px;
 }
 .div-style{
-  border: 1px solid black;
+
+  box-shadow: rgba(139, 139, 180, 0.25) 0px 30px 60px -12px inset, rgba(228, 184, 184, 0.3) 0px 18px 36px -18px inset;
   padding-left: 20%;
 }
 img{
