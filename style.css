@@ -1,0 +1,14 @@
+#submit{
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+.heading{
+    align-content: center;
+    text-align: center;
+   
+  
+}
+span{
+  color: red;
+}
