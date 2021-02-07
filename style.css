@@ -1,3 +1,4 @@
+
 #submit{
   display: flex;
   justify-content: center;
@@ -11,4 +12,9 @@
 }
 span{
   color: red;
+}
+
+img{
+ width: 120px;
+ height : 120px;
 }
