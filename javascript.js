@@ -3,6 +3,8 @@ const anotherparent=document.getElementById("show-extratext")
 const button=document.getElementById('submit-btn')
 button.addEventListener('click',function(){
     const text=document.getElementById('search-input').value;
+parent.innerHTML=null;
+    anotherparent.innerHTML=null
     fetchdata(text);
 })
 
@@ -25,11 +27,13 @@ const fetchdata= data=>{
 
 const displaydata = newdata=>{
     
-    parent.innerHTML=null;
-    //anotherparent.innerHTML=null
+     parent.innerHTML=null;
+    // anotherparent.innerHTML=null
    for(let i=0;i<newdata.length;i++){
      let c=document.createElement("div")
+     c.className="div-style"
      info=`
+        <h6>Click the image to show details</h6>
        <h1>Food-Name: ${newdata[i].strMeal}</h1>
        <img onclick="showdetail('${i}')" src="${newdata[i].strMealThumb}"></img>
        `
@@ -52,11 +56,7 @@ const showdetail= (i,j)=>{
  })
 }
 const updateui=(data,i)=>{
-//    console.log( data[i].strIngredient1)
-//    console.log( data[i].strIngredient2)
-//    console.log( data[i].strIngredient3)
-//    console.log( data[i].strIngredient4)
-//    console.log(data[i].strArea)
+
  const ul=document.createElement("li")
   anotherparent.innerHTML=null;
    detailinfo=`
@@ -67,6 +67,7 @@ const updateui=(data,i)=>{
    <p>Ingredient 4 : ${ data[i].strIngredient4}</p>
    <p>Ingredient 5 : ${ data[i].strIngredient5}</p>
    <p> Food category : ${ data[i].strCategory}</p>
+   <a href="${data[i].strYoutube}">wathch video to make this food</a>
    `
   ul.innerHTML=detailinfo;
   anotherparent.appendChild(ul);
